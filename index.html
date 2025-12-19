@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Howell Holdings LLC - Corporate Trustee for The Howell Legacy Group, a Delaware statutory trust providing asset management, fiduciary oversight, and multi-generational wealth preservation.">
+    <meta name="keywords" content="corporate trustee, family trust, asset management, wealth preservation, fiduciary services, The Howell Legacy Group, Delaware trust">
+    <meta name="author" content="Howell Holdings LLC">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Howell Holdings LLC - Corporate Trustee">
+    <meta property="og:description" content="Corporate Trustee for The Howell Legacy Group, providing fiduciary oversight and multi-generational wealth preservation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/howell_holdings.png">
+
+    <title>Howell Holdings LLC | Corporate Trustee</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/howell_holdings.png">
+    <link rel="apple-touch-icon" href="images/howell_holdings.png">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            --color-primary: #1a365d;
+            --color-primary-dark: #0f1f3a;
+            --color-primary-light: #2c5282;
+            --color-secondary: #2c3e50;
+            --color-accent: #d4af37;
+            --color-accent-light: #e6c85a;
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #4a4a4a;
+            --color-text-muted: #6b6b6b;
+            --color-border: #e5e5e5;
+            --color-background: #ffffff;
+            --color-background-alt: #f8f9fa;
+            --color-cream: #faf9f7;
+
+            --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-2xl: 6rem;
+
+            --max-width: 1280px;
+            --header-height: 80px;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--color-text-primary);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+        h4 { font-size: 1.25rem; }
+
+        p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: #ffffff;
+            z-index: 1000;
+            transition: box-shadow var(--transition-normal);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .header__logo img {
+            height: 55px;
+            width: auto;
+        }
+
+        .header__logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header__logo-name {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            letter-spacing: 0.05em;
+        }
+
+        .header__logo-tagline {
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav__link {
+            color: var(--color-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            padding: var(--spacing-xs) 0;
+            position: relative;
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width var(--transition-normal);
+        }
+
+        .nav__link:hover::after,
+        .nav__link:focus::after {
+            width: 100%;
+        }
+
+        .nav__link:hover {
+            color: var(--color-primary);
+        }
+
+        /* Mobile Menu Toggle */
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+
+        .nav__toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-secondary);
+            margin: 5px 0;
+            transition: var(--transition-normal);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(165deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            padding: calc(var(--header-height) + var(--spacing-2xl)) var(--spacing-md) var(--spacing-2xl);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero__tagline {
+            display: inline-block;
+            color: var(--color-accent);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero__title {
+            color: #ffffff;
+            margin-bottom: var(--spacing-md);
+            font-weight: 400;
+        }
+
+        .hero__description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            background: transparent;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .hero__cta:hover {
+            background: var(--color-accent);
+            color: var(--color-primary-dark);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .section--alt {
+            background: var(--color-background-alt);
+        }
+
+        .section--dark {
+            background: var(--color-primary);
+            color: #ffffff;
+        }
+
+        .section__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        .section__label {
+            display: inline-block;
+            color: var(--color-primary);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section--dark .section__label {
+            color: var(--color-accent);
+        }
+
+        .section__title {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section--dark .section__title {
+            color: #ffffff;
+        }
+
+        .section__description {
+            font-size: 1.1rem;
+        }
+
+        .section--dark .section__description {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* About Section */
+        .about__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .about__text p {
+            margin-bottom: var(--spacing-md);
+            font-size: 1.05rem;
+        }
+
+        .about__stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .stat {
+            background: var(--color-background);
+            padding: var(--spacing-lg);
+            border-left: 3px solid var(--color-accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat__value {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat__label {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Purpose Grid */
+        .purpose__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .purpose-card {
+            background: var(--color-background);
+            padding: var(--spacing-lg);
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .purpose-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--color-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-normal);
+        }
+
+        .purpose-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .purpose-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .purpose-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .purpose-card__icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-primary);
+        }
+
+        .purpose-card__title {
+            font-size: 1.15rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-primary);
+        }
+
+        .purpose-card__description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Structure Section */
+        .structure__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+        }
+
+        .structure-item {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .structure-item__number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--color-accent);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .structure-item__title {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .structure-item__text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Ownership Section */
+        .ownership {
+            background: var(--color-cream);
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .ownership__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .ownership__info {
+            background: var(--color-background);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .ownership__label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .ownership__name {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .ownership__details {
+            list-style: none;
+        }
+
+        .ownership__details li {
+            padding: var(--spacing-xs) 0;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        .ownership__details li:last-child {
+            border-bottom: none;
+        }
+
+        .ownership__details strong {
+            color: var(--color-text-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-primary-dark);
+            color: #ffffff;
+            padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer__brand img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .footer__tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 350px;
+        }
+
+        .footer__heading {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-accent);
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__links li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer__links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer__links a:hover {
+            color: #ffffff;
+        }
+
+        .footer__contact p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer__bottom {
+            padding-top: var(--spacing-lg);
+        }
+
+        .footer__legal {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer__details {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.7;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer__copyright {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: var(--spacing-md);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .purpose__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .about__content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .structure__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ownership__content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer__top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
+            .nav__list {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                padding: var(--spacing-lg);
+                gap: var(--spacing-md);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-normal);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav__list.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav__toggle {
+                display: block;
+            }
+
+            .nav__toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .nav__toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav__toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero {
+                min-height: auto;
+                padding: calc(var(--header-height) + var(--spacing-xl)) var(--spacing-md) var(--spacing-xl);
+            }
+
+            .purpose__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about__stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer__tagline {
+                margin: 0 auto;
+            }
+
+            .header__logo-text {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Print Styles */
+        @media print {
+            .header,
+            .hero__cta {
+                display: none;
+            }
+
+            .hero {
+                padding-top: var(--spacing-lg);
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="#" class="header__logo" aria-label="Howell Holdings LLC - Home">
+                <img src="images/howell_holdings.png" alt="Howell Holdings LLC">
+                <div class="header__logo-text">
+                    <span class="header__logo-name">Howell Holdings</span>
+                    <span class="header__logo-tagline">Corporate Trustee</span>
+                </div>
+            </a>
+
+            <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#purpose" class="nav__link">Purpose</a></li>
+                    <li><a href="#structure" class="nav__link">Structure</a></li>
+                    <li><a href="#ownership" class="nav__link">Ownership</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__content">
+                <span class="hero__tagline">Corporate Trustee & Master Holding Company</span>
+                <h1 id="hero-title" class="hero__title">Serving The Howell Legacy Group</h1>
+                <p class="hero__description">
+                    Howell Holdings LLC serves as corporate trustee for The Howell Legacy Group,
+                    a sophisticated Delaware statutory trust structure designed for multi-generational
+                    wealth preservation and family enterprise stewardship spanning 150 years.
+                </p>
+                <a href="#purpose" class="hero__cta">
+                    Our Purpose
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">About Howell Holdings</span>
+                    <h2 id="about-title" class="section__title">Corporate Trustee Excellence</h2>
+                    <p class="section__description">
+                        Providing comprehensive fiduciary oversight and strategic management
+                        for multi-generational wealth preservation.
+                    </p>
+                </div>
+
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>
+                            Howell Holdings LLC is a Delaware limited liability company formed on
+                            June 16, 2025, serving as the corporate trustee for The Howell Legacy Group,
+                            a sophisticated Delaware statutory trust. Operating under the DBA "AITCH,"
+                            we provide comprehensive fiduciary oversight and strategic management of all
+                            trust assets and business operations.
+                        </p>
+                        <p>
+                            As corporate trustee, Howell Holdings LLC fulfills a critical fiduciary role,
+                            ensuring proper asset management and protection for trust beneficiaries while
+                            maintaining the highest standards of corporate governance and regulatory compliance.
+                        </p>
+                        <p>
+                            Our structure enables seamless succession planning and continuity of family
+                            enterprise operations across multiple generations, with clearly defined protocols
+                            and bloodline-only trustee requirements.
+                        </p>
+                    </div>
+
+                    <div class="about__stats">
+                        <div class="stat">
+                            <div class="stat__value">Delaware LLC</div>
+                            <div class="stat__label">Formation</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__value">June 16, 2025</div>
+                            <div class="stat__label">Established</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__value">150 Years</div>
+                            <div class="stat__label">Trust Duration</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__value">Corporate Trustee</div>
+                            <div class="stat__label">Primary Role</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purpose Section -->
+        <section id="purpose" class="section section--alt" aria-labelledby="purpose-title">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Purpose & Business Activities</span>
+                    <h2 id="purpose-title" class="section__title">Our Fiduciary Mission</h2>
+                    <p class="section__description">
+                        Comprehensive trustee services and strategic oversight across
+                        all aspects of trust administration and business operations.
+                    </p>
+                </div>
+
+                <div class="purpose__grid">
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Corporate Trustee Services</h3>
+                        <p class="purpose-card__description">
+                            Serving as corporate trustee for The Howell Legacy Group Delaware Statutory Trust
+                            with comprehensive fiduciary oversight.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Asset Management</h3>
+                        <p class="purpose-card__description">
+                            Strategic asset management and protection for trust beneficiaries,
+                            ensuring preservation and growth across generations.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Strategic Oversight</h3>
+                        <p class="purpose-card__description">
+                            Direct strategic oversight of subsidiary entities including AITCH Enterprises LLC
+                            and all operating companies.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <path d="M14 2v6h6"/>
+                                <path d="M16 13H8"/>
+                                <path d="M16 17H8"/>
+                                <path d="M10 9H8"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Estate Planning</h3>
+                        <p class="purpose-card__description">
+                            Estate planning implementation and administration ensuring seamless
+                            wealth transfer and family enterprise continuity.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Charitable Giving</h3>
+                        <p class="purpose-card__description">
+                            Coordination and management of charitable giving activities through
+                            three independent 501(c)(3) foundations.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Business Development</h3>
+                        <p class="purpose-card__description">
+                            Business development and investment oversight including capital allocation,
+                            acquisitions, and strategic growth initiatives.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 1v22"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">Tax Optimization</h3>
+                        <p class="purpose-card__description">
+                            Tax optimization strategies and compliance management across all trust entities,
+                            ensuring regulatory adherence and fiscal efficiency.
+                        </p>
+                    </article>
+
+                    <article class="purpose-card">
+                        <div class="purpose-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 16v-4"/>
+                                <path d="M12 8h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="purpose-card__title">General Business</h3>
+                        <p class="purpose-card__description">
+                            Any lawful business purpose under Delaware law, maintaining flexibility
+                            for future enterprise development.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structure Section -->
+        <section id="structure" class="section section--dark" aria-labelledby="structure-title">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Organizational Structure</span>
+                    <h2 id="structure-title" class="section__title">Corporate Hierarchy & Governance</h2>
+                    <p class="section__description">
+                        A sophisticated multi-tier structure providing optimal asset protection,
+                        tax efficiency, and governance flexibility.
+                    </p>
+                </div>
+
+                <div class="structure__grid">
+                    <div class="structure-item">
+                        <div class="structure-item__number">01</div>
+                        <h3 class="structure-item__title">Trust Structure</h3>
+                        <p class="structure-item__text">
+                            The Howell Legacy Group (Delaware Statutory Trust) serves as the apex of
+                            the organizational structure, with Howell Holdings LLC serving as corporate
+                            trustee providing fiduciary oversight of all trust assets and operations.
+                        </p>
+                    </div>
+
+                    <div class="structure-item">
+                        <div class="structure-item__number">02</div>
+                        <h3 class="structure-item__title">Corporate Hierarchy</h3>
+                        <p class="structure-item__text">
+                            Three-tier structure: Trust to Corporate Trustee to Holding Company to
+                            Operating Subsidiaries. This provides optimal asset protection, tax
+                            efficiency, and governance flexibility across all business operations.
+                        </p>
+                    </div>
+
+                    <div class="structure-item">
+                        <div class="structure-item__number">03</div>
+                        <h3 class="structure-item__title">Management</h3>
+                        <p class="structure-item__text">
+                            John Shelton Howell III serves as Managing Trustee and Manager with full
+                            authority for strategic direction, subsidiary oversight, capital allocation,
+                            and all major business decisions with clearly defined succession protocols.
+                        </p>
+                    </div>
+
+                    <div class="structure-item">
+                        <div class="structure-item__number">04</div>
+                        <h3 class="structure-item__title">Operating Divisions</h3>
+                        <p class="structure-item__text">
+                            Five key divisions: Technology (AITCH Technologies), Financial Services
+                            (52nd Street Capital Group), Real Estate (AITCH Land Group), Entertainment
+                            (AITCH IP Holdings), and Charitable Operations (three 501(c)(3) foundations).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ownership Section -->
+        <section id="ownership" class="ownership" aria-labelledby="ownership-title">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Membership & Ownership</span>
+                    <h2 id="ownership-title" class="section__title">Sole Member</h2>
+                    <p class="section__description">
+                        Howell Holdings LLC is wholly owned by The Howell Legacy Group,
+                        a Delaware Statutory Trust designed for multi-generational wealth preservation.
+                    </p>
+                </div>
+
+                <div class="ownership__content">
+                    <div class="ownership__info">
+                        <p class="ownership__label">Sole Member</p>
+                        <h3 class="ownership__name">The Howell Legacy Group</h3>
+                        <ul class="ownership__details">
+                            <li><strong>Entity Type:</strong> Delaware Statutory Trust</li>
+                            <li><strong>File Number:</strong> 14313192</li>
+                            <li><strong>EIN:</strong> 39-7096147</li>
+                            <li><strong>Ownership Interest:</strong> 100%</li>
+                            <li><strong>Capital Contribution:</strong> As determined by the Trust</li>
+                        </ul>
+                    </div>
+
+                    <div class="about__text">
+                        <p>
+                            The Howell Legacy Group is a sophisticated Delaware Statutory Trust
+                            established for multi-generational wealth preservation, family enterprise
+                            stewardship, and charitable giving coordination.
+                        </p>
+                        <p>
+                            As the sole member of Howell Holdings LLC, the Trust maintains complete
+                            ownership and control over the corporate trustee, ensuring alignment
+                            between trustee actions and trust objectives.
+                        </p>
+                        <p>
+                            This structure provides continuity of operations and succession planning
+                            that extends across a 150-year trust duration, with bloodline-only trustee
+                            requirements ensuring family control for generations to come.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="images/howell_holdings.png" alt="Howell Holdings LLC">
+                    <p class="footer__tagline">
+                        Corporate Trustee for The Howell Legacy Group, providing fiduciary oversight
+                        and multi-generational wealth preservation through strategic management
+                        and disciplined governance.
+                    </p>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__heading">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#purpose">Purpose</a></li>
+                        <li><a href="#structure">Structure</a></li>
+                        <li><a href="#ownership">Ownership</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact</h4>
+                    <p><strong>Principal Office:</strong></p>
+                    <p>251 Little Falls Drive</p>
+                    <p>Wilmington, Delaware 19808</p>
+                    <p style="margin-top: var(--spacing-sm);"><strong>Mailing Address:</strong></p>
+                    <p>1710 Hudgins Farm Circle</p>
+                    <p>Fredericksburg, VA 22408</p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__legal">
+                    Howell Holdings LLC is a Delaware Limited Liability Company serving as the
+                    Corporate Trustee for The Howell Legacy Group (Delaware Statutory Trust).
+                    The Company's term continues until dissolved in accordance with the Operating
+                    Agreement or Delaware law.
+                </p>
+
+                <p class="footer__details">
+                    <strong>Entity Details:</strong> Delaware File Number: 10230071 |
+                    Formation Date: June 16, 2025 | Registered Agent: Corporation Service Company<br>
+                    <strong>Sole Member:</strong> The Howell Legacy Group (Delaware Statutory Trust) |
+                    Trust File Number: 14313192 | EIN: 39-7096147
+                </p>
+
+                <p class="footer__copyright">
+                    &copy; 2025 Howell Holdings LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav__toggle');
+        const navList = document.querySelector('.nav__list');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.purpose-card, .structure-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

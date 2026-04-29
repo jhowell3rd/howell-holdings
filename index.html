@@ -687,6 +687,20 @@
                 --header-height: 70px;
             }
 
+            /* Pull <nav> out of the header flex flow so the hamburger sits
+               at the right edge instead of floating in the middle (caused
+               by header__inner using justify-content: space-between with
+               three flex children when the nav is hidden off-screen). */
+            .header__inner > nav {
+                position: static;
+                flex: 0 0 0;
+                width: 0;
+                overflow: visible;
+            }
+            .nav__toggle {
+                margin-left: auto;
+            }
+
             .nav__list {
                 position: fixed;
                 top: var(--header-height);

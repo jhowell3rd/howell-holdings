@@ -878,7 +878,13 @@
                 word-break: break-word;
             }
         }
-    </style>
+    
+        /* Family-consistent nav: distribute links evenly on desktop; mobile dropdown unaffected */
+        @media (min-width: 1025px) {
+            .header__inner > nav { flex: 1 1 auto; margin-left: 2rem; }
+            .header__inner > nav > .nav__list { justify-content: space-evenly; width: 100%; }
+        }
+</style>
 </head>
 <body>
     <!-- Header -->

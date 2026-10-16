@@ -1,0 +1,6 @@
+# Entity facts on this site are derived from the register at build time.
+# See scripts/build.sh — the build fails rather than publishing facts it could
+# not derive, and the markers in the HTML are committed empty.
+[build]
+  publish = "."
+  command = "bash scripts/build.sh"

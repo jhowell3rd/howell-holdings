@@ -4,3 +4,36 @@
 [build]
   publish = "."
   command = "bash scripts/build.sh"
+
+# ── THE PUBLISH DIRECTORY IS THE REPOSITORY ──────────────────────────────────
+#
+# build.publish is ".", so every file here is served. Netlify excludes
+# package.json, netlify.toml and .env by itself; it excludes nothing else.
+# Measured across the estate on 2026-10-23, root-published sites were serving
+# their own build scripts, READMEs, editor folders and — on two of them — signed
+# operating agreements that no page links to.
+#
+# Blocked by path rather than by moving the folders, because the build reads
+# them from here and a move would break the site to fix the exposure.
+#
+# The 404 body renders AT the requested URL, which is why 404.html carries no
+# external stylesheet or image: a relative reference would resolve against the
+# blocked folder and fail.
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/REWRITE_DRAFT/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
